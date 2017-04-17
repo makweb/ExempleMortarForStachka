@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="16dp"
+    android:background="@android:color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar_iv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/drawer_name_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="16sp"
+                tools:text="user name"/>
+
+            <TextView
+                android:id="@+id/date_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="8dp"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                tools:text="19 Mar"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/review_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:text="@string/dummy_txt"
+            android:maxLines="2"/>
+    </LinearLayout>
+
+
+</LinearLayout>

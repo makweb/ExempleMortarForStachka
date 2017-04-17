@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.softdesign.exemplemortar.ui.screens.profile.ProfileView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/avatar_wrap"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@android:color/darker_gray">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatar_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:civ_border_width="4dp"
+                    app:civ_border_color="@android:color/white"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"/>
+                <TextView
+                    android:id="@+id/drawer_name_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    tools:textColor="@android:color/black"
+                    tools:text="name"
+                    android:textSize="24sp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:layout_gravity="bottom"
+                    android:background="#6e000000"
+                    />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="32dp"
+                    android:src="@drawable/ic_phone_black_24dp"
+                    android:tint="@color/colorAccent"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/phone_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+7 (909) 987-45-15"
+                        android:layout_marginRight="16dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Work"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="72dp"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="32dp"
+                    android:src="@drawable/ic_email_black_24dp"
+                    android:tint="@color/colorAccent"/>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mail_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:text="makweb@yandex.ru"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Personal"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="72dp"
+                android:background="@android:color/darker_gray"/>
+
+            <Button
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="68dp"
+                android:layout_marginRight="68dp"
+                android:text="CHANGE PROFILE"
+                android:theme="@style/AccentBtn"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:id="@+id/card_picture_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/amount_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:shadowColor="@android:color/black"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        tools:text="$ 800.00"
+                        tools:textColor="@android:color/black"/>
+
+                    <LinearLayout
+                        android:id="@+id/card_number_wrap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorPrimary"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/card_user_name_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/card_number_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="number"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</com.softdesign.exemplemortar.ui.screens.profile.ProfileView>
