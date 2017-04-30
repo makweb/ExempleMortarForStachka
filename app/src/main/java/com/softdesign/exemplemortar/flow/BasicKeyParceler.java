@@ -10,12 +10,30 @@ import flow.KeyParceler;
  */
 
 public class BasicKeyParceler implements KeyParceler {
-    @NonNull @Override public Parcelable toParcelable(@NonNull Object key) {
-        return (Parcelable) key;
+    private final Parcelable mEmptyParcelable = new Parcelable() {
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            /*empty*/
+        }
+    };
+
+    @NonNull
+    @Override
+    public Parcelable toParcelable(@NonNull Object key) {
+        if (key instanceof Parcelable)
+            return (Parcelable) key;
+        else
+            return mEmptyParcelable;
     }
 
     @NonNull
-    @Override public Object toKey(@NonNull Parcelable parcelable) {
+    @Override
+    public Object toKey(@NonNull Parcelable parcelable) {
         return parcelable;
     }
 }
